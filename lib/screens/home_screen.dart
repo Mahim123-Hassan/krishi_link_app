@@ -73,7 +73,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       return Container(
                         clipBehavior: Clip.hardEdge,
                         width: MediaQuery.of(context).size.width,
-          
+
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
                         ),
@@ -82,30 +82,51 @@ class _HomeScreenState extends State<HomeScreen> {
                     },
                   );
                 }).toList(),
-                
-                
               ),
-              
-              Padding(padding: EdgeInsetsGeometry.symmetric(horizontal: 20,vertical: 20),
+
+              Padding(
+                padding: EdgeInsetsGeometry.symmetric(
+                  horizontal: 20,
+                  vertical: 20,
+                ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    RichText(text: TextSpan(
-          
-                        style: Theme.of(context).textTheme.titleLarge?.copyWith(color: Colors.black),
-          
-                        text: "Latest ",children: [
-                      TextSpan(
-                        style: Theme.of(context).textTheme.titleLarge?.copyWith(color: Colors.green),
-                        text: "Crops",
-                      ),
-          
-                    ])),
-                    CropeCard()
+                    Row(
+                      children: [
+                        RichText(
+                          text: TextSpan(
+                            style: Theme.of(context).textTheme.titleLarge
+                                ?.copyWith(color: Colors.black),
+
+                            text: "Latest ",
+                            children: [
+                              TextSpan(
+                                style: Theme.of(context).textTheme.titleLarge
+                                    ?.copyWith(color: Colors.green),
+                                text: "Crops",
+                              ),
+                            ],
+                          ),
+                        ),
+                        Spacer(),
+                        TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            "Vew All",
+                            style: Theme.of(context).textTheme.titleSmall,
+                          ),
+                        ),
+                      ],
+                    ),
+                    CropeCard(),
+                    CropeCard(),
+                    CropeCard(),
+                    CropeCard(),
                   ],
                 ),
-              )
+              ),
             ],
           ),
         ),
