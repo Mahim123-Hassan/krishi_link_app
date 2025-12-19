@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:krishi_link/screens/screen_background.dart';
+import 'package:krishi_link/screens/small_card.dart';
 
 import 'crope_card.dart';
 
@@ -114,7 +115,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         TextButton(
                           onPressed: () {},
                           child: Text(
-                            "Vew All",
+                            "View All",
                             style: Theme.of(context).textTheme.titleSmall,
                           ),
                         ),
@@ -122,8 +123,37 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     CropeCard(),
                     CropeCard(),
-                    CropeCard(),
-                    CropeCard(),
+
+                    const SizedBox(height: 10),
+                    Text(
+                      "How it Works",
+                      style: Theme.of(
+                        context,
+                      ).textTheme.titleLarge?.copyWith(fontSize: 30),
+                    ),
+                    SizedBox(height: 10),
+                    SmallCard(),
+                    SizedBox(height: 5),
+                    SmallCard(),
+                    SizedBox(height: 5),
+                    SmallCard(),
+                    const SizedBox(height: 50),
+                    Text(
+                      "Latest News",
+                      style: Theme.of(
+                        context,
+                      ).textTheme.titleLarge?.copyWith(fontSize: 30),
+                    ),
+                    const SizedBox(height: 70,),
+                   RichText(text: TextSpan(
+                     text: "Fertilizer & Tools ",
+
+                     children: [
+                       TextSpan(
+                         text: "Recommendation"
+                       )
+                     ]
+                   ))
                   ],
                 ),
               ),
