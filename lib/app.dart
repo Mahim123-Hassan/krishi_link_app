@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:krishi_link/screens/SignUpScreen.dart';
+import 'package:krishi_link/screens/add%20_new_crop.dart';
 import 'package:krishi_link/screens/forgotPassword.dart';
 import 'package:krishi_link/screens/forgot_password_verify_otp_screen.dart';
 import 'package:krishi_link/screens/home_screen.dart';
@@ -75,6 +76,7 @@ class KrishiLink extends StatelessWidget {
             ForgotPasswordVerifyOtpScreen(),
         ResetPasswordScreen.name:(_)=>ResetPasswordScreen(),
         HomeScreen.name:(_)=> HomeScreen(),
+        Addnewcrop.name:(_)=>Addnewcrop(),
 
       },
       initialRoute: SplashScreens.name,

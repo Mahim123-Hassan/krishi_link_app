@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:krishi_link/screens/screen_background.dart';
 import 'package:krishi_link/screens/small_card.dart';
 
+import 'add _new_crop.dart';
 import 'crope_card.dart';
 import 'fertilizer_&_tools_recommendation_card.dart';
 
@@ -172,13 +173,16 @@ class _HomeScreenState extends State<HomeScreen> {
                           text: TextSpan(
                             text: "Fertilizer & Tools ",
                             style: Theme.of(context).textTheme.titleMedium
-                                ?.copyWith(color: Colors.black,fontSize: 20),
+                                ?.copyWith(color: Colors.black, fontSize: 20),
 
                             children: [
                               TextSpan(
                                 text: "Recommendation",
                                 style: Theme.of(context).textTheme.titleMedium
-                                    ?.copyWith(color: Colors.green,fontSize: 20),
+                                    ?.copyWith(
+                                      color: Colors.green,
+                                      fontSize: 20,
+                                    ),
                               ),
                             ],
                           ),
@@ -208,7 +212,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               ),
-              
             ],
           ),
         ),
@@ -216,16 +219,13 @@ class _HomeScreenState extends State<HomeScreen> {
       floatingActionButton: FloatingActionButton.extended(
         backgroundColor: Colors.green,
         foregroundColor: Colors.white,
-        label: Row(
-        children: [
-          Icon(Icons.add),
-          Text("Create post"),
+        label: Row(children: [Icon(Icons.add), Text("Create crop")]),
 
-        ],
+        onPressed: _onTepCropeButton,
       ),
-
-        
-        onPressed: (){},),
     );
+  }
+  void _onTepCropeButton(){
+    Navigator.pushNamed(context, Addnewcrop.name);
   }
 }
