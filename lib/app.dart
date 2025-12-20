@@ -47,7 +47,7 @@ class KrishiLink extends StatelessWidget {
         ),
         filledButtonTheme: FilledButtonThemeData(
           style: FilledButton.styleFrom(
-            fixedSize: Size.fromWidth(double.maxFinite),
+
             padding: EdgeInsets.symmetric(vertical: 14, horizontal: 24),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(8),

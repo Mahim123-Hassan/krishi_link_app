@@ -4,6 +4,7 @@ import 'package:krishi_link/screens/screen_background.dart';
 import 'package:krishi_link/screens/small_card.dart';
 
 import 'crope_card.dart';
+import 'fertilizer_&_tools_recommendation_card.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -125,11 +126,21 @@ class _HomeScreenState extends State<HomeScreen> {
                     CropeCard(),
 
                     const SizedBox(height: 10),
-                    Text(
-                      "How it Works",
-                      style: Theme.of(
-                        context,
-                      ).textTheme.titleLarge?.copyWith(fontSize: 30),
+                    RichText(
+                      text: TextSpan(
+                        text: "How it ",
+                        style: Theme.of(
+                          context,
+                        ).textTheme.titleLarge?.copyWith(color: Colors.black),
+
+                        children: [
+                          TextSpan(
+                            text: " Works",
+                            style: Theme.of(context).textTheme.titleLarge
+                                ?.copyWith(color: Colors.green),
+                          ),
+                        ],
+                      ),
                     ),
                     SizedBox(height: 10),
                     SmallCard(),
@@ -138,22 +149,62 @@ class _HomeScreenState extends State<HomeScreen> {
                     SizedBox(height: 5),
                     SmallCard(),
                     const SizedBox(height: 50),
-                    Text(
-                      "Latest News",
-                      style: Theme.of(
-                        context,
-                      ).textTheme.titleLarge?.copyWith(fontSize: 30),
-                    ),
-                    const SizedBox(height: 70,),
-                   RichText(text: TextSpan(
-                     text: "Fertilizer & Tools ",
+                    RichText(
+                      text: TextSpan(
+                        text: "Latest",
+                        style: Theme.of(
+                          context,
+                        ).textTheme.titleLarge?.copyWith(color: Colors.black),
 
-                     children: [
-                       TextSpan(
-                         text: "Recommendation"
-                       )
-                     ]
-                   ))
+                        children: [
+                          TextSpan(
+                            text: " News",
+                            style: Theme.of(context).textTheme.titleLarge
+                                ?.copyWith(color: Colors.green),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 70),
+                    Row(
+                      children: [
+                        RichText(
+                          text: TextSpan(
+                            text: "Fertilizer & Tools ",
+                            style: Theme.of(context).textTheme.titleMedium
+                                ?.copyWith(color: Colors.black,fontSize: 20),
+
+                            children: [
+                              TextSpan(
+                                text: "Recommendation",
+                                style: Theme.of(context).textTheme.titleMedium
+                                    ?.copyWith(color: Colors.green,fontSize: 20),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 5),
+                    FertilizerToolsRecommendationCard(),
+                    const SizedBox(height: 50),
+                    RichText(
+                      text: TextSpan(
+                        text: "Join Our Comunity",
+
+                        style: TextStyle(
+                          color: Colors.red,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        children: [
+                          TextSpan(
+                            text: ' And get Updates',
+                            style: TextStyle(color: Colors.green),
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),

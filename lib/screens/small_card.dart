@@ -5,6 +5,8 @@ class SmallCard extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return Card(
+      elevation: 3,
+      shadowColor: Colors.grey,
       child: Column(
         children: [
           Container(
@@ -28,7 +30,6 @@ class SmallCard extends StatelessWidget {
                         style: Theme.of(context).textTheme.titleLarge,
                       ),
                     ),
-
                   ),
                   Center(
                     child: Text(
@@ -36,7 +37,6 @@ class SmallCard extends StatelessWidget {
                       style: Theme.of(context).textTheme.bodyMedium,
                     ),
                   ),
-
                 ],
               ),
             ),
