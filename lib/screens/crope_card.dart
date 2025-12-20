@@ -82,7 +82,7 @@ class CropeCard extends StatelessWidget {
         ),
         Positioned(
           right: 10,
-          top: 10,
+          top: 15,
           child: IconButton(onPressed: () {}, icon: Icon(Icons.favorite,color: Colors.red,)),
         ),
       ],

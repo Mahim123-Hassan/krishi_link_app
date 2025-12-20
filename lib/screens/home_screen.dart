@@ -208,10 +208,24 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               ),
+              
             ],
           ),
         ),
       ),
+      floatingActionButton: FloatingActionButton.extended(
+        backgroundColor: Colors.green,
+        foregroundColor: Colors.white,
+        label: Row(
+        children: [
+          Icon(Icons.add),
+          Text("Create post"),
+
+        ],
+      ),
+
+        
+        onPressed: (){},),
     );
   }
 }
