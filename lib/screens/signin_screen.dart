@@ -55,7 +55,9 @@ class _SigninScreenState extends State<SigninScreen> {
                 FilledButton(
                   onPressed: _onTapSignInButton,
                   child: Text("Login "),
-                  style: FilledButton.styleFrom(),
+                  style: FilledButton.styleFrom(
+                    fixedSize: Size(500, 50)
+                  ),
                 ),
                 const SizedBox(height: 24),
                 Center(

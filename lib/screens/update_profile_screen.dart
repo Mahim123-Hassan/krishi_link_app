@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:krishi_link/screens/screen_background.dart';
 
+import '../widgets/photo_picker.dart';
+
 class UpdateProfileScreen extends StatefulWidget {
   const UpdateProfileScreen({super.key});
   static const String name = "UpdateProfileScreen";
@@ -14,6 +16,7 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.green,
         title: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -49,9 +52,23 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
                 "Update Profile",
                 style: Theme.of(context).textTheme.titleLarge,
               ),
+
+              const SizedBox(height: 8),
+              Container(
+                height: 50,
+                width: double.maxFinite,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: GestureDetector(
+                  onTap: (){}c,
+                    child: photo_picker()),
+              ),
               const SizedBox(height: 8),
               TextFormField(decoration: InputDecoration(hintText: "Email")),
               SizedBox(height: 8),
+
               TextFormField(
                 decoration: InputDecoration(hintText: "First Name"),
               ),
@@ -65,9 +82,8 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
               FilledButton(
                 onPressed: () {},
                 style: FilledButton.styleFrom(fixedSize: Size(500, 50)),
-                child: Text("Add Crop"),
+                child: Icon(Icons.arrow_circle_right_outlined),
               ),
-
             ],
           ),
         ),
@@ -75,3 +91,5 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
     );
   }
 }
+
+
