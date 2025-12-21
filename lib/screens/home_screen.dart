@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:krishi_link/screens/screen_background.dart';
 import 'package:krishi_link/screens/small_card.dart';
+import 'package:krishi_link/screens/update_profile_screen.dart';
 
 import 'add _new_crop.dart';
 import 'crope_card.dart';
@@ -31,34 +32,39 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               Padding(
                 padding: const EdgeInsets.all(20),
-                child: Row(
-                  children: [
-                    CircleAvatar(radius: 30),
-                    SizedBox(width: 5),
-                    Row(
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "Mahim",
-                              style: Theme.of(
-                                context,
-                              ).textTheme.titleLarge?.copyWith(fontSize: 18),
-                            ),
-                            Text(
-                              "hmahim951@gmail.com",
-                              style: Theme.of(
-                                context,
-                              ).textTheme.titleMedium?.copyWith(fontSize: 13),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                    Spacer(),
-                    IconButton(onPressed: () {}, icon: Icon(Icons.logout)),
-                  ],
+                child: GestureDetector(
+                  onTap: (){
+                    Navigator.pushNamed(context,UpdateProfileScreen.name);
+                  },
+                  child: Row(
+                    children: [
+                      CircleAvatar(radius: 30),
+                      SizedBox(width: 5),
+                      Row(
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Mahim",
+                                style: Theme.of(
+                                  context,
+                                ).textTheme.titleLarge?.copyWith(fontSize: 18),
+                              ),
+                              Text(
+                                "hmahim951@gmail.com",
+                                style: Theme.of(
+                                  context,
+                                ).textTheme.titleMedium?.copyWith(fontSize: 13),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      Spacer(),
+                      IconButton(onPressed: () {}, icon: Icon(Icons.logout)),
+                    ],
+                  ),
                 ),
               ),
               SizedBox(height: 10),

@@ -7,6 +7,7 @@ import 'package:krishi_link/screens/home_screen.dart';
 import 'package:krishi_link/screens/reset_password_screen.dart';
 import 'package:krishi_link/screens/signin_screen.dart';
 import 'package:krishi_link/screens/splash_screens.dart';
+import 'package:krishi_link/screens/update_profile_screen.dart';
 
 class KrishiLink extends StatelessWidget {
   const KrishiLink({super.key});
@@ -47,14 +48,19 @@ class KrishiLink extends StatelessWidget {
           ),
         ),
         filledButtonTheme: FilledButtonThemeData(
+
           style: FilledButton.styleFrom(
+
+
 
             padding: EdgeInsets.symmetric(vertical: 14, horizontal: 24),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(8),
+
             ),
             backgroundColor: Colors.green,
             foregroundColor: Colors.white,
+
           ),
         ),
         textTheme: TextTheme(
@@ -77,6 +83,7 @@ class KrishiLink extends StatelessWidget {
         ResetPasswordScreen.name:(_)=>ResetPasswordScreen(),
         HomeScreen.name:(_)=> HomeScreen(),
         Addnewcrop.name:(_)=>Addnewcrop(),
+        UpdateProfileScreen.name:(_)=>UpdateProfileScreen(),
 
       },
       initialRoute: SplashScreens.name,

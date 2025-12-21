@@ -8,7 +8,7 @@ import 'home_screen.dart';
 
 class SigninScreen extends StatefulWidget {
   const SigninScreen({super.key});
-  static const String name='/SigninScreen';
+  static const String name = '/SigninScreen';
 
   @override
   State<SigninScreen> createState() => _SigninScreenState();
@@ -32,7 +32,7 @@ class _SigninScreenState extends State<SigninScreen> {
                   style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
                 ),
                 const SizedBox(height: 8),
-            
+
                 TextFormField(
                   decoration: InputDecoration(
                     fillColor: Colors.white,
@@ -45,17 +45,17 @@ class _SigninScreenState extends State<SigninScreen> {
                   decoration: InputDecoration(
                     fillColor: Colors.white,
                     filled: true,
-            
+
                     hintText: "Enter your Password",
                     labelText: "Password",
-            
                   ),
                 ),
-                const SizedBox(height: 8,),
-            
+                const SizedBox(height: 8),
+
                 FilledButton(
                   onPressed: _onTapSignInButton,
                   child: Text("Login "),
+                  style: FilledButton.styleFrom(),
                 ),
                 const SizedBox(height: 24),
                 Center(
@@ -94,11 +94,13 @@ class _SigninScreenState extends State<SigninScreen> {
   }
 
   void _onTapSignInButton() {
-    Navigator.pushNamed(context,  HomeScreen.name);
+    Navigator.pushNamed(context, HomeScreen.name);
   }
+
   void _onTapForgotPasswordButton() {
     Navigator.pushNamed(context, Forgotpassword.name);
   }
+
   void _onTapsignUpButton() {
     Navigator.pushNamed(context, Signupscreen.name);
   }

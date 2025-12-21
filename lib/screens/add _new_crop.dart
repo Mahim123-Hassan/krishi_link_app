@@ -111,8 +111,8 @@ class _AddnewcropState extends State<Addnewcrop> {
                     Center(
                       child: FilledButton(
                         onPressed: () {},
-                        child: Text("Add Crop"),
                         style: FilledButton.styleFrom(fixedSize: Size(500, 50)),
+                        child: Text("Add Crop"),
                       ),
                     ),
                   ],
